@@ -1,0 +1,101 @@
+<Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{marginBottom:'40px'}}>
+<Container>
+  <Typography
+    variant="h5"
+    sx={{ mb: "24px", color: "white" }}
+  >
+    Stay tuned to know <br></br>more Updates
+  </Typography>
+  <Typography variant="body1" sx={{ mb: "20px", color: "white" }}>
+    Address :
+  </Typography>
+  <Link
+    href="https://www.google.co.in/maps/place/Integral+Ad+Science+India+Pvt.+Ltd./@18.5610881,73.9148519,17z/data=!3m1!4b1!4m5!3m4!1s0x3bc2c18dfbdadc77:0x5eb290b970589414!8m2!3d18.561083!4d73.9170406?hl=en"
+    target="_blank"
+    sx={{
+      textDecoration: "none",
+      color: "white",
+      "&:hover": { color: "yellow" },
+    }}
+  >
+    <Typography variant="body1">
+      9th Floor, Tower 2, Phoenix Fountainhead, 207, Nagar Rd, Clover
+      Park, Viman Nagar, Pune, Maharashtra 411014
+    </Typography>
+  </Link>
+  
+</Container>
+</Grid>
+
+<Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{marginBottom:'40px'}}>
+<Container sx={{ textAlign: "center", padding: "5px" }}>
+  <HashLink to='#home' smooth><img src={logo} alt="CRE Logo" width="200px" height="200px"/></HashLink>
+</Container>
+</Grid>
+
+<Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{marginBottom:'40px',height:"auto" }}>
+<Container>
+  <Typography
+    variant="h5"
+    sx={{margin: "0px 0px 24px", color: "white" }}
+  >
+    Reach out to us
+  </Typography>
+
+  <Typography variant="h6" sx={{ mb:"15px", color: "white" }}>
+    Manager :
+  </Typography>
+  <Typography variant="body1" gutterBottom sx={{color: "white"}}>
+      Aniket Rane : <Link href="tel:7499355194" sx={{
+      textDecoration: "none",
+      color: "white",
+      "&:hover": { color: "yellow" },
+    }}> 7499355194</Link>
+  </Typography>
+  <Typography variant="body1" gutterBottom sx={{color: "white"}}>
+      Adarsh Halake : <Link href="tel:7499355194" sx={{
+      textDecoration: "none",
+      color: "white",
+      "&:hover": { color: "yellow" },
+    }}> 7499355194</Link>
+  </Typography>
+  <br></br>
+
+  <Typography variant="h6" sx={{ mb:"15px", color: "white" }}>
+    Assistant Manager :
+  </Typography>
+  <Typography variant="body1" gutterBottom sx={{color: "white"}}>
+      Shreyas Gurav : <Link href="tel:7499355194" sx={{
+      textDecoration: "none",
+      color: "white",
+      "&:hover": { color: "yellow" },
+    }}> 7499545646</Link>
+  </Typography>
+  <Typography variant="body1" gutterBottom sx={{color: "white"}}>
+      Prathmesh Jadhav : <Link href="tel:7499355194" sx={{
+      textDecoration: "none",
+      color: "white",
+      "&:hover": { color: "yellow" },
+    }}>7494354657</Link>
+  </Typography>
+  <br></br>
+
+  <Typography variant="h6" sx={{ mb:"15px",fontSize: "20px", color: "white" }}>
+  Interns :
+  </Typography>
+  <Typography variant="body1" gutterBottom sx={{fontSize: "16px", color: "white"}}>
+      Samarth Ikkalaki : <Link href="tel:7499355194" sx={{
+      textDecoration: "none",
+      color: "white",
+      "&:hover": { color: "yellow" },
+    }}> 45444657634 </Link>
+  </Typography>
+  <Typography variant="body1" gutterBottom sx={{fontSize: "16px", color: "white"}}>
+     Suraj Kumbhar : <Link href="tel:7499355194" sx={{
+      textDecoration: "none",
+      color: "white",
+      "&:hover": { color: "yellow" },
+    }}> 4354664677 </Link>
+  </Typography>
+</Container>
+</Grid>

@@ -1,0 +1,7 @@
+export {default as Navbar} from '../Navbar/Navbar'
+export {default as Home} from '../Home/Home'
+export {default as About} from '../About/About'
+export {default as Team} from '../Team/Team'
+export {default as Events} from '../Events/Events'
+export {default as Photos} from '../Photos/Photos'
+export {default as Footer} from '../Footer/Footer.jsx'
