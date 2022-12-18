@@ -3,7 +3,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #362461;
+  background: radial-gradient(#4a3179,#08030e)
+}
+
+::selection {
+  color: yellow;
 }
 
 a {

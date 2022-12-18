@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 //import { makeStyles } from "@mui/styles";
-import { Link ,Typography ,Grid , Container} from "@mui/material";
-import { HashLink} from "react-router-hash-link/dist/react-router-hash-link.cjs.development";
+import { Link ,Typography ,Grid} from "@mui/material";
+import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.development";
 
 
 
@@ -9,7 +9,14 @@ export const NavLink = styled(HashLink)({
     padding: "12px",
     color: "white",
 });
-  
+
+export const SectionHeading = styled(Typography)({
+    textAlign:'center',
+    fontWeight: "bold",
+    marginBottom : '30px',
+    color:'white',
+    //textShadow:'3px 3px 3px red'
+})
 
 export const SectionTitle = styled(Typography)({
     marginBottom: "24px", 
@@ -49,4 +56,3 @@ padding: 10px;
     
   }
 `
-

@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Typography, Box } from "@mui/material";
+import { Stack, Typography, Box} from "@mui/material";
 import iaslogo from "../images/ias-logo.svg";
 //import { useStyles } from "./NavbarStyles";
 import { NavLink } from "./NavbarStyles";
@@ -25,9 +25,9 @@ const Navbar = () => {
               alignItems: {
                 xs: "flex-start",
                 sm: "flex-start",
-                md: "flex-end",
-                lg: "flex-end",
-                xl: "flex-end",
+                md: "center",
+                lg: "center",
+                xl: "center",
               },
               margin: "20px",
               flexDirection: {
@@ -39,7 +39,6 @@ const Navbar = () => {
               },
             }}
           >
-            
             <Box sx={{ flexGrow: 1 }}>
               <NavLink to="/">
                 <img
@@ -51,23 +50,22 @@ const Navbar = () => {
               </NavLink>
             </Box>
 
-            <NavLink to="/">
-              Home
-            </NavLink>
-            <NavLink to="#about" smooth >
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="#about" smooth>
               About
             </NavLink>
-            <NavLink to="#team" smooth >
+            <NavLink to="#team" smooth>
               Team
             </NavLink>
-            <NavLink to="#events" smooth >
+            <NavLink to="#events" smooth>
               Events
             </NavLink>
-            <NavLink to="#photos"smooth >
+            <NavLink to="#photos" smooth>
               Photos
             </NavLink>
-
-
+            <NavLink to="#contact" smooth>
+              Contact
+            </NavLink>
           </Stack>
         </Typography>
       </header>

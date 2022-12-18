@@ -21,8 +21,8 @@ import {
 
 const Footer = () => {
   return (
-    <>
-      <GridContainer container>
+    <Container id='contact'>
+      <GridContainer container >
         <GridItem item xs={12} sm={12} md={4} lg={4} xl={4}>
           <Container>
             <SectionTitle variant="h5">
@@ -118,7 +118,7 @@ const Footer = () => {
           </SocialIcons>
         </GridItem>
       </SocialIconsContainer>
-    </>
+    </Container>
   );
 };
 

@@ -1,25 +1,33 @@
 import React from "react";
-import { Typography, Container } from "@mui/material";
+import { Typography, Container, Grid } from "@mui/material";
 import logo from "../images/logo.png";
 import { NavLink } from "../Global/GlobalStyles";
 import {
   ContainerLogoHome,
   GridContainerHome,
   GridItemHome,
-  SectionTitleHome
+  SectionTitleHome,
+  GridContainer,
+  GridItem,
 } from "./HomeStyles";
 
 const Home = () => {
   return (
     <>
       <main>
-        <div>
+        <Container>
           <GridContainerHome container>
             <GridItemHome item>
-              <SectionTitleHome>CLOUD<br/>RELIABILITY<br/>ENGINEERS , IAS<br/>PUNE</SectionTitleHome>
+              <SectionTitleHome>
+                CLOUD
+                <br />
+                RELIABILITY
+                <br />
+                ENGINEERS
+              </SectionTitleHome>
             </GridItemHome>
 
-            <GridItemHome item xs={12} sm={12} md={4} lg={4} xl={4}>
+            <GridItemHome item>
               <ContainerLogoHome>
                 <NavLink to="#home" smooth>
                   <img src={logo} alt="CRE Logo" width="350px" height="350px" />
@@ -27,27 +35,46 @@ const Home = () => {
               </ContainerLogoHome>
             </GridItemHome>
           </GridContainerHome>
-          <Container maxWidth="sm" sx={{ marginTop: "50px" }}>
-            <Typography
-              variant="h3"
-              align="center"
-              sx={{ color: "white", fontWeight: "bold" }}
-              gutterBottom
-            >
-              CRE-IAS TEAM, PUNE
-            </Typography>
-            <Typography
-              variant="h6"
-              align="center"
-              paragrapgh
-              sx={{ color: "white" }}
-            >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem,
-              laborum, sequi fugiat sint, est cum tenetur deleniti nisi nemo eum
-              non eaque esse autem et nesciunt repellat? Qui, atque nihil.
-            </Typography>
-          </Container>
-        </div>
+
+          <Grid container sx={{ justifyContent: "center" }}>
+            <Grid item>
+              <Typography
+                variant="h4"
+                align="center"
+                sx={{ color: "white", fontWeight: "bold", mb: "35px" }}
+              >
+                CLOUD RELIABILITY ENGINEERS , IAS PUNE
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <GridContainer container>
+            <GridItem item xs={12} sm={12} md={3} lg={3} xl={3}>
+              <Container sx={{ color: "red", fontWeight: "bolder" }}>
+                <span>------------------------</span>
+              </Container>
+            </GridItem>
+            <GridItem item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Typography
+                variant="h6"
+                align="center"
+                paragrapgh
+                sx={{ color: "white" }}
+              >
+                A smart, talented and enthusiastic team which works relentlessly
+                to turn a mere idea into reality . CRE is where ideas are born,
+                worked upon and executed! We are in charge of proactively
+                building and implementing services to make IT and support better
+                at their jobs.
+              </Typography>
+            </GridItem>
+            <GridItem item xs={12} sm={12} md={3} lg={3} xl={3}>
+              <Container sx={{ color: "red", fontWeight: "bold" }}>
+                <span>------------------------</span>
+              </Container>
+            </GridItem>
+          </GridContainer>
+        </Container>
       </main>
     </>
   );

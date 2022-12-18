@@ -1,6 +1,7 @@
-import { HashLink as Link } from "react-router-hash-link/dist/react-router-hash-link.cjs.development";
+import { HashLink} from "react-router-hash-link/dist/react-router-hash-link.cjs.development";
 import { styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
+import { Button } from "@mui/material";
 
 export const useStyles = makeStyles({
   navbar: {
@@ -32,7 +33,15 @@ export const useStyles = makeStyles({
   },
 });
 
-export const NavLink = styled(Link)({
+export const NavLink = styled(HashLink)({
   padding: "12px",
   color: "white",
 });
+
+export const NavbarButton = styled(Button)({
+  textTransform:"none",
+  //padding:'7px 12px',
+  borderRadius:'15px',
+  backgroundColor:'',
+  margin:'5px 10px 5px 5px'
+})
