@@ -9,7 +9,6 @@ const App = () => {
       <Home/>
       <About/>
       <Team/>
-      <Events/>
       <Photos/>
       <Footer/>
     </div>

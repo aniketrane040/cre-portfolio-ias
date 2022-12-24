@@ -30,7 +30,7 @@ const Home = () => {
             <GridItemHome item>
               <ContainerLogoHome>
                 <NavLink to="#home" smooth>
-                  <img src={logo} alt="CRE Logo" width="350px" height="350px" />
+                  <img src={logo} alt="CRE Logo" width="380px" height="380px" />
                 </NavLink>
               </ContainerLogoHome>
             </GridItemHome>

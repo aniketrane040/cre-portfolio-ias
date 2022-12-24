@@ -6,7 +6,7 @@ export const GridContainer = styled(Grid)({
     direction:"row",
     height:'auto',
     justifyContent:"space-evenly",
-    padding: "100px 100px 20px 100px ",
+    padding: "20px 100px 20px 100px ",
 })
 
 export const GridItem = styled(Grid)({

@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Typography, Box} from "@mui/material";
+import { Stack, Typography, Box, Container} from "@mui/material";
 import iaslogo from "../images/ias-logo.svg";
 //import { useStyles } from "./NavbarStyles";
 import { NavLink } from "./NavbarStyles";
@@ -7,7 +7,7 @@ import { NavLink } from "./NavbarStyles";
 const Navbar = () => {
   //const classes = useStyles();
   return (
-    <>
+    <Container>
       <header id="home">
         <Typography variant="h6">
           <Stack
@@ -69,7 +69,7 @@ const Navbar = () => {
           </Stack>
         </Typography>
       </header>
-    </>
+    </Container>
   );
 };
 

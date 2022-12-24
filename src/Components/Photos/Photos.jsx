@@ -1,16 +1,97 @@
-import React from 'react'
-import {Container} from '@mui/material'
+import React from "react";
+import { Container, Grid, ImageList, ImageListItem } from "@mui/material";
+
+import {
+  SectionHeading,
+  SectionText,
+  SectionTitle,
+} from "../Global/GlobalStyles";
 
 const Photos = () => {
   return (
-    <div id='photos'>
-      <h1 style={{color:'white'}}>Photos</h1>
+    <div id="photos">
       <Container>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ducimus, nam rem, accusantium deleniti ad sint reiciendis magnam tempora delectus fugiat aut. Architecto itaque vero provident corporis ducimus sit quo a perferendis. Voluptatibus delectus cupiditate animi in nemo suscipit totam placeat ipsum dignissimos commodi dolor quia accusamus itaque repellendus aut aperiam aliquid architecto ab nulla dolorum aspernatur, voluptatem illum et. Eveniet ipsam necessitatibus earum aut praesentium fuga tenetur voluptatum laudantium? Mollitia eius consequatur commodi deserunt quam corrupti voluptates atque voluptatem. Soluta magnam impedit alias mollitia sed unde blanditiis sapiente earum repellendus! Exercitationem cupiditate totam, praesentium vel ab cum quibusdam! Rem illo voluptate quidem facere, accusamus soluta enim incidunt dolor esse odio est expedita sunt omnis minus fuga veritatis eveniet id iure nemo. Debitis obcaecati ducimus ad illo, velit quod, perspiciatis sapiente voluptas maxime sequi nesciunt. Tenetur rem ad accusantium molestias numquam maiores impedit, laboriosam cum temporibus, obcaecati vitae dolores? Saepe ullam rerum inventore perferendis corrupti sunt consectetur nam, ea animi minima atque excepturi facere molestiae exercitationem sequi beatae esse autem ex hic similique maiores! Commodi nostrum veritatis obcaecati ad soluta ipsum saepe dolor laudantium corporis reprehenderit, fugiat sequi deleniti unde minus. Nulla harum ad nostrum quos recusandae laborum, laudantium soluta?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, ipsam. Tenetur voluptatum ut commodi soluta alias iste. Ipsa adipisci quaerat modi, porro aliquam nam iste asperiores at, inventore eaque quia pariatur, ea debitis? Illo provident officiis recusandae et architecto laudantium corporis alias, tempore earum ipsam cupiditate rem itaque rerum minus doloribus inventore eveniet, obcaecati asperiores iste eos ab accusamus a placeat? Sequi reiciendis magni molestiae voluptatibus tempora, eligendi esse iure iusto labore unde commodi tempore aut mollitia facilis, nesciunt ullam sapiente. Iste quod aut dicta officiis consequatur repellendus molestiae repudiandae non pariatur quos, labore ut. Praesentium et eos maxime eveniet reiciendis sequi sed saepe dolor veniam esse ipsum aperiam reprehenderit asperiores, voluptas perferendis. Asperiores deleniti tempore, magnam commodi fugiat cum cumque id incidunt. Cumque atque eaque, dolore quo autem nam. Numquam quia, alias asperiores dolorem dignissimos aliquam dolor omnis libero saepe esse officia minus deserunt quisquam ex cumque excepturi nisi obcaecati maiores molestias ipsa quas vero! Tempore obcaecati minus dolor praesentium, placeat omnis nemo repudiandae quae corrupti dolores hic, illo repellendus quo molestias aliquid rem quos facilis dignissimos! Voluptatem exercitationem aliquid ipsam reprehenderit sed velit, dolorem quia nemo, mollitia, quas fuga magni illum rerum vero natus enim dicta laboriosam molestiae minima. Ratione eligendi tempore incidunt accusamus optio dignissimos quos similique dicta dolore ipsa eveniet sint possimus tempora, doloribus saepe illum excepturi veniam nesciunt sequi ipsum aut voluptatibus ipsam. Dolor incidunt provident obcaecati nobis at! Dolores labore aspernatur est reprehenderit officia dolor commodi provident voluptas atque eveniet ipsa in earum, minima necessitatibus excepturi expedita pariatur ea quisquam repudiandae. Rerum enim distinctio error ut expedita libero, impedit natus illum id consequuntur, atque debitis molestiae ducimus. Non labore, nemo veritatis consequatur voluptatibus minus, incidunt officiis obcaecati provident dolor ratione accusantium distinctio consequuntur minima sed! Sapiente iure autem doloribus dolorum laborum alias deleniti quaerat perspiciatis dignissimos vitae eum maxime praesentium unde illo architecto maiores fugit, aliquam rem excepturi sint non itaque? Mollitia quae repudiandae vero. Quia, ex. Et culpa maxime nostrum alias? Dignissimos quibusdam error obcaecati eaque provident! Earum facilis ea animi doloribus atque corrupti beatae obcaecati, labore ipsum id quaerat quasi aspernatur quisquam, nobis dolores explicabo debitis deserunt molestiae repellendus ex quo eius? Ea provident, autem aliquid minima, quos tempore temporibus sapiente dicta in omnis quibusdam id, accusantium aut harum sint beatae recusandae excepturi. Soluta facilis nam provident, vero vitae eaque quidem aut error cumque natus rerum mollitia dignissimos quo laboriosam autem temporibus laborum, velit libero distinctio porro? Maiores vel nemo fuga dolor eius velit, exercitationem non laborum quo provident, pariatur dolore, itaque doloremque rem delectus officiis. Qui atque nesciunt ipsa, quos voluptatem, accusantium, ipsum dolorum fugiat eaque porro voluptatibus dignissimos quod placeat a maiores eos molestiae laborum veniam in error ipsam animi? Nemo, laudantium neque odio debitis ipsum odit fuga fugiat placeat in consectetur. Ipsa, impedit, odio nisi, quam eius voluptatibus recusandae iusto pariatur soluta distinctio dolorum unde. Ipsa dicta iste deleniti error explicabo modi tenetur eaque vel quas delectus fugit earum quis cumque excepturi soluta, fugiat, ea inventore quaerat saepe possimus!
-      </p>
+        <Grid container sx={{ flexDirection: "row", justifyContent: "center",marginBottom:'50px'}}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <SectionHeading variant="h4" sx={{ marginTop: "40px" }}>
+              PHOTOS
+            </SectionHeading>
+          </Grid>
+
+          <Grid item>
+            <ImageList
+              sx={{ width: 900, height: 450}}
+              variant="woven"
+              cols={3}
+              gap={8}
+            >
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}?w=161&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </Grid>
+        </Grid>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Photos
+export default Photos;
+
+const itemData = [
+  {
+    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    title: "Breakfast",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+    title: "Burger",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+    title: "Camera",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
+    title: "Coffee",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+    title: "Hats",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+    title: "Honey",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+    title: "Basketball",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    title: "Fern",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+    title: "Mushrooms",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+    title: "Tomato basil",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
+    title: "Sea star",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+    title: "Bike",
+  },
+];

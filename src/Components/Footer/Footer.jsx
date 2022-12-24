@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@mui/material";
+import { Container , Grid} from "@mui/material";
 import logo from "../images/logo.png";
 import { iasOfficeGoogleMap } from "../Global/GlobalConstants";
 
@@ -17,11 +17,19 @@ import {
   SectionText,
   SocialIcons,
   SocialIconsContainer,
+  SectionHeading
 } from "../Global/GlobalStyles";
 
 const Footer = () => {
   return (
     <Container id='contact'>
+      <Grid container sx={{ flexDirection: "row", justifyContent: "center" }}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <SectionHeading variant="h4" sx={{ marginTop: "40px" }}>
+              CONTACT US
+            </SectionHeading>
+          </Grid>
+      </Grid>
       <GridContainer container >
         <GridItem item xs={12} sm={12} md={4} lg={4} xl={4}>
           <Container>

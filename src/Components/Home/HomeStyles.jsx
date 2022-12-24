@@ -6,7 +6,7 @@ export const GridContainerHome = styled(Grid)({
     direction:'row',
     height:'auto',
     justifyContent:'space-evenly',
-    margin:"30px 0px 90px 0px",
+    margin:"30px 0px 60px 0px",
     padding:"0px 10px 0px 10px",
     overflow:'hidden'
     
@@ -24,7 +24,7 @@ export const ContainerLogoHome = styled(Container)({
 
 export const SectionTitleHome = styled(Typography)({
         color: "white",
-        fontSize: "80px",
+        fontSize: "90px",
         fontWeight: "1000",
         letterSpacing: "4px",
         textShadow: "5px 5px 0px rgb(255  0  0/ 70%)",
@@ -35,7 +35,7 @@ export const GridContainer = styled(Grid)({
         justifyContent: "center",
         alignItems : 'center',
         flexDirection: "row",
-        padding:'0px 100px 80px 100px'
+        padding:'0px 100px 30px 100px'
 })
 
 export const GridItem = styled(Grid)({
