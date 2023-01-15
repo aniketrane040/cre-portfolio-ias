@@ -1,42 +1,62 @@
 import React from "react";
 import { Container, Grid, ImageList, ImageListItem } from "@mui/material";
 
-import {
-  SectionHeading,
-  SectionText,
-  SectionTitle,
-} from "../Global/GlobalStyles";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import { EffectCards } from "swiper";
+import "swiper/swiper.min.css";
+import "swiper/modules/effect-cards/effect-cards.min.css";
+
+import { SectionHeading } from "../Global/GlobalStyles";
 
 const Photos = () => {
   return (
     <div id="photos">
       <Container>
-        <Grid container sx={{ flexDirection: "row", justifyContent: "center",marginBottom:'50px'}}>
+        <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <SectionHeading variant="h4" sx={{ marginTop: "40px" }}>
+            <SectionHeading
+              variant="h4"
+              sx={{ marginTop: "100px", marginBottom: "10px" }}
+            >
               PHOTOS
             </SectionHeading>
           </Grid>
-
-          <Grid item>
-            <ImageList
-              sx={{ width: 900, height: 450}}
-              variant="woven"
-              cols={3}
-              gap={8}
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+          xl={12}
+          sx={{ margin: "20px 0px 20px 0px", padding: "0px 200px 0px 200px" }}
+        >
+          <Container>
+            <Swiper
+              effect={"cards"}
+              grabCursor={true}
+              modules={[EffectCards]}
+              className="mySwiper"
             >
               {itemData.map((item) => (
-                <ImageListItem key={item.img}>
+                <SwiperSlide>
                   <img
-                    src={`${item.img}?w=161&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                    key={item.img}
+                    style={{
+                      borderRadius: "40px",
+                      width: "700px",
+                      objectFit: "crop",
+                      auto: "format",
+                    }}
+                    src={`${item.img}`}
+                    //src={`${item.img}?w=700&fit=crop&auto=format`}
+                    //srcSet={`${item.img}?w=700&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
-                    loading="lazy"
                   />
-                </ImageListItem>
+                </SwiperSlide>
               ))}
-            </ImageList>
-          </Grid>
+            </Swiper>
+          </Container>
         </Grid>
       </Container>
     </div>
