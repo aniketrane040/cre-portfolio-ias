@@ -1,12 +1,23 @@
 import React from "react";
-import { Container, Grid, ImageList, ImageListItem } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 
-import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
-import { EffectCards } from "swiper";
-import "swiper/swiper.min.css";
-import "swiper/modules/effect-cards/effect-cards.min.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards , Autoplay } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-cards";
 
 import { SectionHeading } from "../Global/GlobalStyles";
+
+// import { Swiper, SwiperSlide } from "swiper/react";
+
+// // Import Swiper styles
+// import "swiper/css";
+// import "swiper/css/effect-cards";
+
+// import "./styles.css";
+
+// // import required modules
+// import { EffectCards } from "swiper";
 
 const Photos = () => {
   return (
@@ -35,7 +46,11 @@ const Photos = () => {
             <Swiper
               effect={"cards"}
               grabCursor={true}
-              modules={[EffectCards]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay , EffectCards]}
               className="mySwiper"
             >
               {itemData.map((item) => (

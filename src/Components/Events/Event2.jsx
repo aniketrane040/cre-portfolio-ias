@@ -1,25 +1,31 @@
-import React from "react";
-import { Container, Grid} from "@mui/material";
-import HeroCarousel from "react-hero-carousel";
 
-import {
-  SectionHeading
-} from "../Global/GlobalStyles";
+import React from "react";
+import { Container, Grid } from "@mui/material";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+// import required modules
+import { EffectFade, Autoplay } from "swiper";
+
+import { SectionHeading } from "../Global/GlobalStyles";
 
 const Event2 = () => {
-  const onHello = () =>{
-    alert("Hello Everyone")
-  }
   return (
     <div id="event1">
       <Container>
         <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <SectionHeading variant="h4" sx={{ marginTop: "30px",marginBottom:'50px' }}>
-              Event2
+            <SectionHeading
+              variant="h4"
+              sx={{ marginTop: "30px", marginBottom: "50px" }}
+            >
+              Event 2
             </SectionHeading>
           </Grid>
-            <Grid
+          <Grid
             item
             xs={12}
             sm={12}
@@ -34,28 +40,49 @@ const Event2 = () => {
               flexWrap: "wrap",
             }}
           >
-            <HeroCarousel sx={{mb:'10px'}}>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              effect={"fade"}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              // pagination={{
+              //   clickable: true,
+              // }}
+              // navigation={true}
+              modules={[EffectFade, Autoplay]}
+            >
               {itemData.map((item) => (
-                <Container sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  flexWrap: "wrap",
-                }}>
+                <Container
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                ><SwiperSlide>
                   <img
-                  key={item.img}
-                  style={{ borderRadius: "40px",width:'500px',objectFit:'crop',auto:'format'}}
-                  src={`${item.img}`}
-                  //src={`${item.img}?w=700&fit=crop&auto=format`}
-                  //srcSet={`${item.img}?w=700&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  onClick={onHello}
-                />
-                </Container> 
+                    key={item.img}
+                    style={{
+                      borderRadius: "40px",
+                      width: "500px",
+                      objectFit: "crop",
+                      auto: "format",
+                    }}
+                    src={`${item.img}`}
+                    //src={`${item.img}?w=700&fit=crop&auto=format`}
+                    //srcSet={`${item.img}?w=700&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                  />
+                </SwiperSlide>
+                  
+                </Container>
               ))}
-            </HeroCarousel>
-            </Grid>
+            </Swiper>
+          </Grid>
         </Grid>
       </Container>
     </div>
