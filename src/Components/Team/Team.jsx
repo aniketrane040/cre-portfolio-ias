@@ -1,24 +1,19 @@
 import React from "react";
-import Card from "../Card/Card";
 import { Container, Grid } from "@mui/material";
-import { CardContainer, CardItem } from "./TeamStyles";
 
 import {
   SectionHeading,
-  SectionText,
-  SectionTitle,
 } from "../Global/GlobalStyles";
 
 //Card Slider imports
-import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import "swiper/swiper.min.css";
-import "swiper/modules/pagination/pagination.min.css";
-import "swiper/modules/navigation/navigation.min.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 //Imports for Card
 import { CardBox, CardImage, CardName } from "../Card/CardStyles";
-import logo from "../images/samarth.jpg";
 import "../Card/Card.css";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -100,7 +95,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -109,7 +104,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -118,7 +113,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -127,7 +122,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   
   {
@@ -137,7 +132,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/532220/pexels-photo-532220.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -146,7 +141,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -155,7 +150,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -164,7 +159,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -173,7 +168,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -182,7 +177,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -191,7 +186,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   {
     img: "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -200,7 +195,7 @@ const teamMembers = [
     Facebook: "https://www.facebook.com",
     Github: "https://www.github.com",
     Instagram: "https//www.instagram.com",
-    Facebook: "https://www.facebook.com",
+    Twitter: "https://www.facebook.com",
   },
   
   

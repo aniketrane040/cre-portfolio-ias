@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
 import { EventContainer, EventItem } from "./EventStyles";
-import { Photos, Event1, Event2, Event3, Event4 } from "../defaultExports";
+import { Event1, Event2, Event3, Event4 } from "../defaultExports";
 import {
   SectionHeading
 } from "../Global/GlobalStyles";
