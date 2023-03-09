@@ -3,6 +3,7 @@ import React from "react";
 import { Container, Grid } from "@mui/material";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import './Events.css';
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,32 +15,21 @@ import { SectionHeading } from "../Global/GlobalStyles";
 
 const Event2 = () => {
   return (
-    <div id="event1">
-      <Container>
-        <Grid container>
+      <Container maxWidth="md" >
+        <Grid container sx={{padding:{lg:'0px 100px 20px 70px'}}}
+          >
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <SectionHeading
               variant="h4"
-              sx={{ marginTop: "30px", marginBottom: "50px" }}
+              sx={{ marginTop: "50px", marginBottom: "20px" }}
             >
               Event 2
             </SectionHeading>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={12}
-            lg={12}
-            xl={12}
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              flexWrap: "wrap",
-            }}
-          >
+        </Grid>
+        <Grid item 
+          
+        >
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
@@ -65,10 +55,10 @@ const Event2 = () => {
                   }}
                 ><SwiperSlide>
                   <img
+                  class="imgevents"
                     key={item.img}
                     style={{
                       borderRadius: "40px",
-                      width: "500px",
                       objectFit: "crop",
                       auto: "format",
                     }}
@@ -82,13 +72,10 @@ const Event2 = () => {
                 </Container>
               ))}
             </Swiper>
-          </Grid>
         </Grid>
       </Container>
-    </div>
   );
 };
-
 export default Event2;
 
 const itemData = [

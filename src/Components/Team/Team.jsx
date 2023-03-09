@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
+import teamMembers from "./Teamm.js"
 
 import {
   SectionHeading,
@@ -7,7 +8,7 @@ import {
 
 //Card Slider imports
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import {Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -35,15 +36,44 @@ const Team = () => {
       </Grid>
       <Swiper
         slidesPerView={3}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            slidesPerGroup:1,
+          },
+          400:{
+            slidesPerView:1,
+            slidesPerGroup:1,
+          },
+          639: {
+            slidesPerView: 2,
+            slidesPerGroup:2,
+          },
+          865:{
+            slidesPerView:2,
+            slidesPerGroup:2,
+          },
+          1000:{
+            slidesPerView:3,
+            slidesPerGroup:3,
+          },
+          1500:{
+            slidesPerView:4,
+            slidesPerGroup:4,
+          },
+          1700:{
+            slidesPerView:4,
+            slidesPerGroup:4,
+          }
+        }}
         spaceBetween={30}
-        slidesPerGroup={3}
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Navigation]}
         className="mySwiper"
       >
         {teamMembers.map((info) => (
@@ -87,116 +117,5 @@ const Team = () => {
 
 export default Team;
 
-const teamMembers = [
-  {
-    img: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Kylie",
-    position: "Software developer",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Liza",
-    position: "Front-end Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Cheryl",
-    position: "Back-end Developer",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "David",
-    position: "Web Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  
-  {
-    img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Sam",
-    position: "Front-end Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/532220/pexels-photo-532220.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Max",
-    position: "Back-end Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Suzen",
-    position: "Web Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Riya",
-    position: "Web Developer",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Robert",
-    position: "Back-end Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Megan",
-    position: "Back-end Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Thomas",
-    position: "Web Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  {
-    img: "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "John",
-    position: "Front-end Develepor",
-    Facebook: "https://www.facebook.com",
-    Github: "https://www.github.com",
-    Instagram: "https//www.instagram.com",
-    Twitter: "https://www.facebook.com",
-  },
-  
-  
-];
+
+// add this in team.js file and import here

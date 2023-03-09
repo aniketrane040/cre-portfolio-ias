@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Container, Grid } from "@mui/material";
 import logo from "../images/logo.png";
 import { NavLink } from "../Global/GlobalStyles";
+import './Home.css';
 import {
   ContainerLogoHome,
   GridContainerHome,
@@ -18,7 +19,7 @@ const Home = () => {
         <Container>
           <GridContainerHome container>
             <GridItemHome item>
-              <SectionTitleHome>
+              <SectionTitleHome sx={{fontSize : {xs : "40px" , sm : "70px" , md : "80px" , lg : "90px" , xl : "100px"}}}>
                 CLOUD
                 <br />
                 RELIABILITY
@@ -30,7 +31,7 @@ const Home = () => {
             <GridItemHome item>
               <ContainerLogoHome>
                 <NavLink to="#home" smooth>
-                  <img src={logo} alt="CRE Logo" width="380px" height="380px" />
+                  <img id="imglogo" src={logo} alt="CRE Logo"/>
                 </NavLink>
               </ContainerLogoHome>
             </GridItemHome>
