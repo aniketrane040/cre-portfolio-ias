@@ -1,0 +1,1 @@
+export {default as archit} from '../images/archit.jpeg';

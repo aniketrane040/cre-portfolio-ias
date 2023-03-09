@@ -1,0 +1,34 @@
+@media  screen and (max-width : 600px){
+    #imglogo{
+        width: 260px;
+        height: 260px;
+    }
+}
+
+@media  (min-width : 601px) and (max-width : 900px){
+    #imglogo{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media  (min-width : 901px) and (max-width : 1200px){
+    #imglogo{
+        width: 340px;
+        height: 340px;
+    }
+}
+
+@media  (min-width : 1201px) and (max-width : 1500px){
+    #imglogo{
+        width: 380px;
+        height: 380px;
+    }
+}
+
+@media  (min-width : 1501px) and (max-width : 1800px){
+    #imglogo{
+        width: 420px;
+        height: 420px;
+    }
+}

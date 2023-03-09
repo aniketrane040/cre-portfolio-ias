@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards , Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
+import './Photos.css'
 
 import { SectionHeading } from "../Global/GlobalStyles";
 
@@ -21,28 +22,21 @@ import { SectionHeading } from "../Global/GlobalStyles";
 
 const Photos = () => {
   return (
-    <div id="photos">
-      <Container>
-        <Grid container>
+      <Container id="photos" maxWidth="md" >
+        <Grid container sx={{padding:{lg:'20px 70px 20px 70px'}}}
+          >
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <SectionHeading
               variant="h4"
-              sx={{ marginTop: "100px", marginBottom: "10px" }}
+              sx={{ marginTop: "50px", marginBottom: "20px" }}
             >
               PHOTOS
             </SectionHeading>
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          xl={12}
-          sx={{ margin: "20px 0px 20px 0px", padding: "0px 200px 0px 200px" }}
+        <Grid item 
+          
         >
-          <Container>
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -52,14 +46,15 @@ const Photos = () => {
               }}
               modules={[Autoplay , EffectCards]}
               className="mySwiper"
+              
             >
               {itemData.map((item) => (
                 <SwiperSlide>
                   <img
+                    id="imgphotos"
                     key={item.img}
                     style={{
                       borderRadius: "40px",
-                      width: "700px",
                       objectFit: "crop",
                       auto: "format",
                     }}
@@ -71,10 +66,8 @@ const Photos = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </Container>
         </Grid>
       </Container>
-    </div>
   );
 };
 
